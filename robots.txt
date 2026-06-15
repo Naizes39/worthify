@@ -1,0 +1,135 @@
+# Worthify — UK Car MOT History & Risk Checker
+# Last updated: 2026-02 (Session H40j)
+#
+# Policy: we want to be cited and previewed by search engines AND modern
+# LLM crawlers (ChatGPT, Gemini, Claude, Perplexity, etc.) so that users
+# asking "is BK21WCL worth buying?" or "how do I check a UK car's MOT
+# history" can find Worthify. We DO restrict crawling of /report/* (paid
+# content) and /api/admin/* so unauthenticated paid pages and the admin
+# console can't be indexed.
+
+# ── Search engines ───────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# ── Generative AI / LLM crawlers ─────────────────────────────────────
+# OpenAI (ChatGPT browsing + search)
+User-agent: GPTBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Google Gemini training & search grounding
+User-agent: Google-Extended
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: GoogleOther
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Anthropic Claude
+User-agent: ClaudeBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Common Crawl (feeds most other LLM training pipelines)
+User-agent: CCBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Apple Intelligence
+User-agent: Applebot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# Mistral / Le Chat
+User-agent: MistralAI-User
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# ── Catch-all (everyone else) ────────────────────────────────────────
+User-agent: *
+Allow: /
+Disallow: /api/admin/
+Disallow: /admin/
+
+# ── Cloudflare Content-Signal opt-in (modern AI permissions) ─────────
+# We explicitly OPT IN to search indexing and AI input (grounding for
+# search answers). We opt OUT of AI training because we don't want our
+# paid registry analysis being silently slurped into commercial training
+# corpora — change `ai-train=yes` if you want to allow training.
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://worthify.co.uk/sitemap.xml
