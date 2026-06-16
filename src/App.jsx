@@ -1,0 +1,1381 @@
+import React from "react";
+
+export default function App() {
+  return (
+    <>
+      <div className="App">
+        <section
+          aria-label="Notifications alt+T"
+          tabIndex="-1"
+          aria-live="polite"
+          aria-relevant="additions text"
+          aria-atomic="false"
+        ></section>
+        <div className="min-h-screen relative">
+          <div
+            style={{
+              position: "fixed",
+              top: "0px",
+              left: "0px",
+              width: "100%",
+              height: "100%",
+              backgroundImage: "url(&quot",
+              backgroundSize: "cover",
+              backgroundPosition: "center center",
+              backgroundRepeat: "no-repeat",
+              filter: "brightness(1.18) contrast(1.05) saturate(1.08)",
+              zIndex: "0",
+            }}
+          ></div>
+          <div
+            style={{
+              position: "fixed",
+              top: "0px",
+              left: "0px",
+              width: "100%",
+              height: "100%",
+              background:
+                "linear-gradient(\n                rgba(0, 0, 0, 0.04) 0%,\n                rgba(0, 0, 0, 0.1) 50%,\n                rgba(0, 0, 0, 0.18) 100%\n              )",
+              zIndex: "1",
+            }}
+          ></div>
+          <div
+            style={{
+              position: "fixed",
+              top: "0px",
+              left: "0px",
+              width: "100%",
+              height: "100%",
+              background:
+                "radial-gradient(\n                rgba(0, 0, 0, 0) 0%,\n                rgba(0, 0, 0, 0.15) 45%,\n                rgba(0, 0, 0, 0.42) 80%,\n                rgba(0, 0, 0, 0.55) 100%\n              )",
+              zIndex: "1",
+              pointerEvents: "none",
+            }}
+          ></div>
+          <div
+            style={{
+              position: "fixed",
+              top: "0px",
+              left: "0px",
+              width: "100%",
+              height: "100%",
+              background:
+                "radial-gradient(\n                circle,\n                rgba(0, 0, 0, 0) 45%,\n                rgba(0, 0, 0, 0.2) 90%,\n                rgba(0, 0, 0, 0.4) 100%\n              )",
+              zIndex: "1",
+              pointerEvents: "none",
+              mixBlendMode: "multiply",
+            }}
+          ></div>
+          <header
+            className="absolute top-0 left-0 right-0 z-50"
+            style={{
+              background: "transparent",
+              borderBottomWidth: "medium",
+              borderBottomStyle: "none",
+              borderBottomColor: "currentcolor",
+              opacity: "1",
+              transform: "none",
+            }}
+          >
+            <div className="px-5 sm:px-6 lg:px-8 xl:px-12 py-3">
+              <div className="flex justify-between items-center gap-4">
+                <div
+                  className="flex items-center space-x-2 cursor-pointer flex-shrink-0"
+                  role="button"
+                  tabIndex="0"
+                  data-testid="worthify-logo"
+                  aria-label="Worthify — go to home"
+                >
+                  <div className="w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden flex items-center justify-center">
+                    <img
+                      alt="Worthify"
+                      className="w-full h-full object-cover"
+                      src="/worthify-logo.png"
+                      style={{
+                        transform: "scale(1.95)",
+                        transformOrigin: "center center",
+                      }}
+                    />
+                  </div>
+                  <div className="leading-tight">
+                    <h1 className="text-lg sm:text-xl font-bold">
+                      <span className="hero-shine">Worthify</span>
+                    </h1>
+                    <p
+                      className="text-[11px] sm:text-xs hidden sm:block"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.88)",
+                        textShadow: "rgba(0, 0, 0, 0.6) 0px 1px 4px",
+                      }}
+                    >
+                      Is it really worth it?
+                    </p>
+                  </div>
+                </div>
+                <nav
+                  className="hidden md:flex items-center gap-1 lg:gap-2"
+                  data-testid="desktop-nav"
+                  aria-label="Primary"
+                >
+                  <a
+                    href="/"
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150"
+                    data-testid="nav-link-navHome"
+                    style={{
+                      color: "rgba(255, 255, 255, 0.92)",
+                      textShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+                    }}
+                  >
+                    Home
+                  </a>
+                  <a
+                    href="/about"
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150"
+                    data-testid="nav-link-navAbout"
+                    style={{
+                      color: "rgba(255, 255, 255, 0.92)",
+                      textShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+                    }}
+                  >
+                    About
+                  </a>
+                  <a
+                    href="/pricing"
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150"
+                    data-testid="nav-link-navPricing"
+                    style={{
+                      color: "rgba(255, 255, 255, 0.92)",
+                      textShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+                    }}
+                  >
+                    Pricing
+                  </a>
+                  <a
+                    href="/faq"
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150"
+                    data-testid="nav-link-navFaq"
+                    style={{
+                      color: "rgba(255, 255, 255, 0.92)",
+                      textShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+                    }}
+                  >
+                    FAQ
+                  </a>
+                  <a
+                    href="/contact"
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-150"
+                    data-testid="nav-link-navContact"
+                    style={{
+                      color: "rgba(255, 255, 255, 0.92)",
+                      textShadow: "rgba(0, 0, 0, 0.5) 0px 1px 4px",
+                    }}
+                  >
+                    Contact
+                  </a>
+                </nav>
+                <div className="flex items-center gap-2 flex-shrink-0">
+                  <select
+                    className="px-2 sm:px-3 py-2 rounded-lg text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-200"
+                    data-testid="language-selector"
+                    style={{
+                      color: "rgb(255, 255, 255)",
+                      border: "1px solid rgba(255, 255, 255, 0.28)",
+                      background: "rgba(15, 23, 42, 0.45)",
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <option
+                      value="en"
+                      style={{
+                        color: "rgb(15, 23, 42)",
+                        background: "rgb(255, 255, 255)",
+                      }}
+                    >
+                      English
+                    </option>
+                    <option
+                      value="pl"
+                      style={{
+                        color: "rgb(15, 23, 42)",
+                        background: "rgb(255, 255, 255)",
+                      }}
+                    >
+                      Polski
+                    </option>
+                    <option
+                      value="de"
+                      style={{
+                        color: "rgb(15, 23, 42)",
+                        background: "rgb(255, 255, 255)",
+                      }}
+                    >
+                      Deutsch
+                    </option>
+                    <option
+                      value="fr"
+                      style={{
+                        color: "rgb(15, 23, 42)",
+                        background: "rgb(255, 255, 255)",
+                      }}
+                    >
+                      Français
+                    </option>
+                    <option
+                      value="es"
+                      style={{
+                        color: "rgb(15, 23, 42)",
+                        background: "rgb(255, 255, 255)",
+                      }}
+                    >
+                      Español
+                    </option>
+                  </select>
+                  <button
+                    type="button"
+                    className="md:hidden w-10 h-10 rounded-lg flex items-center justify-center transition-all"
+                    aria-label="Open menu"
+                    data-testid="mobile-nav-trigger"
+                    style={{
+                      color: "rgb(255, 255, 255)",
+                      border: "1px solid rgba(255, 255, 255, 0.28)",
+                      background: "rgba(15, 23, 42, 0.45)",
+                      backdropFilter: "blur(8px)",
+                    }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="lucide lucide-menu w-5 h-5"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 12h16" />
+                      <path d="M4 18h16" />
+                      <path d="M4 6h16" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </header>
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+            <div
+              className="max-w-xl lg:max-w-5xl xl:max-w-6xl mx-auto text-center"
+              style={{
+                marginTop: "clamp(80px, 12vh, 140px)",
+                opacity: "1",
+                transform: "none",
+              }}
+            >
+              <div
+                className="rounded-xl pt-10 sm:pt-12 px-5 sm:px-6 pb-5 sm:pb-6 panel-premium landing-glass-panel lg:grid lg:grid-cols-2 lg:gap-10 lg:items-center lg:px-10 lg:py-12"
+                style={{
+                  background:
+                    "radial-gradient(\n                    rgba(0, 0, 0, 0.95) 0%,\n                    rgba(0, 0, 0, 0.75) 55%,\n                    rgba(0, 0, 0, 0.25) 100%\n                  )",
+                  border: "1px solid rgba(255, 255, 255, 0.15)",
+                  boxShadow:
+                    "rgba(0, 0, 0, 0.75) 0px 40px 90px -20px,\n                    rgba(255, 255, 255, 0.12) 0px 1px 0px inset",
+                  backdropFilter: "blur(3px)",
+                  marginLeft: "-24px",
+                  marginRight: "-24px",
+                  opacity: "1"
+                }}
+              >
+                <div className="px-3 sm:px-6 pb-8 lg:pb-0 lg:px-2 lg:text-left">
+                  <h2
+                    className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight"
+                    style={{
+                      letterSpacing: "-0.02em",
+                      opacity: "1"
+                    }}
+                  >
+                    <span className="hero-shine">Know The True Value!</span>
+                  </h2>
+                  <div
+                    className="space-y-1"
+                    style={{ opacity: "1",  }}
+                  >
+                    <p
+                      className="text-base sm:text-lg"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.85)",
+                        lineHeight: "1.5",
+                      }}
+                    >
+                      Check the real risk before you buy.
+                    </p>
+                    <p
+                      className="text-base sm:text-lg font-semibold"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.95)",
+                        lineHeight: "1.5",
+                      }}
+                    >
+                      See what it could cost you, and whether it’s worth it.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="rounded-lg p-7 sm:p-8 panel-premium"
+                  style={{
+                    background:
+                      "radial-gradient(\n                      rgba(100, 116, 139, 0.7) 0%,\n                      rgba(100, 116, 139, 0.4) 55%,\n                      rgba(148, 163, 184, 0.08) 100%\n                    )",
+                    border: "1px solid rgba(255, 255, 255, 0.3)",
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.35) 0px 20px 50px -15px,\n                      rgba(255, 255, 255, 0.35) 0px 1px 0px inset",
+                    backdropFilter: "blur(3px) saturate(150%)",
+                    opacity: "1"
+                  }}
+                >
+                  <div className="space-y-4">
+                    <div>
+                      <div className="relative">
+                        <input
+                          className="flex h-9 w-full rounded-md border border-input bg-transparent shadow-sm file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-lg py-6 px-6 text-center uppercase font-bold tracking-widest focus:outline-none transition-all duration-200 placeholder:font-normal placeholder:tracking-normal placeholder:normal-case placeholder:text-sm placeholder:text-slate-500 premium-input"
+                          placeholder="Enter a UK registration"
+                          maxLength="8"
+                          aria-invalid="false"
+                          data-testid="registration-input"
+                          type="text"
+                          value=""
+                          style={{
+                            background:
+                              "linear-gradient(\n                              rgb(241, 245, 249) 0%,\n                              rgb(209, 213, 219) 100%\n                            )",
+                            border: "1px solid rgba(5, 150, 105, 0.18)",
+                            borderRadius: "9999px",
+                            boxShadow:
+                              "rgba(0, 0, 0, 0.1) 0px 2px 4px inset,\n                              rgba(255, 255, 255, 0.55) 0px -1px 0px inset,\n                              rgba(255, 255, 255, 0.4) 0px 0px 0px 1px",
+                            color: "rgb(4, 120, 87)",
+                            paddingRight: "56px",
+                          }}
+                        />
+                        <div
+                          className="absolute right-2 top-1/2 -translate-y-1/2"
+                          style={{ zIndex: "3" }}
+                        >
+                          <input
+                            accept="image/jpeg,image/png,image/webp"
+                            capture="environment"
+                            data-testid="reg-camera-scan-file-input"
+                            type="file"
+                            style={{ display: "none" }}
+                          />
+                          <button
+                            type="button"
+                            aria-label="Scan plate with camera"
+                            title="Scan plate with camera"
+                            data-testid="reg-camera-scan"
+                            tabIndex="0"
+                            style={{
+                              flexShrink: "0",
+                              width: "36px",
+                              height: "36px",
+                              borderRadius: "999px",
+                              borderWidth: "medium",
+                              borderStyle: "none",
+                              borderColor: "currentcolor",
+                              borderImage: "initial",
+                              background:
+                                "linear-gradient(\n                                135deg,\n                                rgb(16, 185, 129),\n                                rgba(16, 185, 129, 0.8)\n                              )",
+                              color: "white",
+                              cursor: "pointer",
+                              display: "inline-flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow:
+                                "rgba(16, 185, 129, 0.333) 0px 6px 14px",
+                              transition: "background 200ms",
+                            }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.4"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="lucide lucide-camera w-5 h-5"
+                              aria-hidden="true"
+                            >
+                              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                              <circle cx="12" cy="13" r="3"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="relative">
+                        <span
+                          className="absolute left-6 top-1/2 transform -translate-y-1/2 text-xl font-bold"
+                          style={{ color: "rgb(4, 120, 87)", zIndex: "2" }}
+                        >
+                          £
+                        </span>
+                        <input
+                          className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 shadow-sm file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-lg py-6 pl-12 pr-6 text-center font-bold tracking-wide focus:outline-none transition-all duration-200 placeholder:font-normal placeholder:tracking-normal placeholder:text-slate-500 placeholder:text-sm premium-input"
+                          placeholder="Enter asking price (optional)"
+                          min="0"
+                          step="100"
+                          type="number"
+                          value=""
+                          style={{
+                            background:
+                              "linear-gradient(\n                              rgb(241, 245, 249) 0%,\n                              rgb(209, 213, 219) 100%\n                            )",
+                            border: "1px solid rgba(5, 150, 105, 0.18)",
+                            borderRadius: "9999px",
+                            boxShadow:
+                              "rgba(0, 0, 0, 0.1) 0px 2px 4px inset,\n                              rgba(255, 255, 255, 0.55) 0px -1px 0px inset,\n                              rgba(255, 255, 255, 0.4) 0px 0px 0px 1px",
+                            color: "rgb(4, 120, 87)",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <div className="relative">
+                        <input
+                          className="flex h-9 w-full rounded-md border border-input bg-transparent shadow-sm file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm text-sm py-6 px-6 text-center uppercase tracking-wider font-mono font-semibold focus:outline-none transition-all duration-200 placeholder:font-normal placeholder:tracking-normal placeholder:normal-case placeholder:text-sm placeholder:text-slate-500 premium-input"
+                          placeholder="Enter VIN (optional)"
+                          maxLength="17"
+                          data-testid="vin-input"
+                          type="text"
+                          value=""
+                          style={{
+                            background:
+                              "linear-gradient(\n                              rgb(241, 245, 249) 0%,\n                              rgb(209, 213, 219) 100%\n                            )",
+                            border: "1px solid rgba(5, 150, 105, 0.18)",
+                            borderRadius: "9999px",
+                            boxShadow:
+                              "rgba(0, 0, 0, 0.1) 0px 2px 4px inset,\n                              rgba(255, 255, 255, 0.55) 0px -1px 0px inset,\n                              rgba(255, 255, 255, 0.4) 0px 0px 0px 1px",
+                            color: "rgb(4, 120, 87)",
+                            paddingRight: "56px",
+                          }}
+                        />
+                        <div
+                          className="absolute right-2 top-1/2 -translate-y-1/2"
+                          style={{ zIndex: "3" }}
+                        >
+                          <input
+                            accept="image/jpeg,image/png,image/webp"
+                            capture="environment"
+                            data-testid="vin-camera-scan-file-input"
+                            type="file"
+                            style={{ display: "none" }}
+                          />
+                          <button
+                            type="button"
+                            aria-label="Scan VIN with camera"
+                            title="Scan VIN with camera"
+                            data-testid="vin-camera-scan"
+                            tabIndex="0"
+                            style={{
+                              flexShrink: "0",
+                              width: "36px",
+                              height: "36px",
+                              borderRadius: "999px",
+                              borderWidth: "medium",
+                              borderStyle: "none",
+                              borderColor: "currentcolor",
+                              borderImage: "initial",
+                              background:
+                                "linear-gradient(\n                                135deg,\n                                rgb(99, 102, 241),\n                                rgba(99, 102, 241, 0.8)\n                              )",
+                              color: "white",
+                              cursor: "pointer",
+                              display: "inline-flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              boxShadow:
+                                "rgba(99, 102, 241, 0.333) 0px 6px 14px",
+                              transition: "background 200ms",
+                            }}
+                          >
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.4"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              className="lucide lucide-camera w-5 h-5"
+                              aria-hidden="true"
+                            >
+                              <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
+                              <circle cx="12" cy="13" r="3"></circle>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <p
+                        className="text-xs mt-1.5 text-center font-mono tracking-wide"
+                        data-testid="vin-helper-text"
+                        style={{ color: "rgba(255, 255, 255, 0.55)" }}
+                      >
+                        e.g. WAUZZZ4L1BD123456
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      data-testid="hero-hpi-badge"
+                      aria-label="Learn more about More Than HPI Check"
+                      className="hero-hpi-badge badge-breathe mx-auto flex items-center gap-2"
+                      tabIndex="0"
+                      style={{
+                        padding: "8px 14px 8px 12px",
+                        borderRadius: "9999px",
+                        background: "rgba(15, 23, 42, 0.55)",
+                        backdropFilter: "blur(14px)",
+                        border: "1px solid rgba(148, 163, 184, 0.22)",
+                        boxShadow:
+                          "rgba(15, 23, 42, 0.18) 0px 6px 18px,\n                          rgba(255, 255, 255, 0.06) 0px 1px 0px inset",
+                        color: "rgb(241, 245, 249)",
+                        fontSize: "12.5px",
+                        fontWeight: "700",
+                        letterSpacing: "-0.1px",
+                        cursor: "pointer",
+                        opacity: "1",
+                        transform: "none",
+                      }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-shield w-3.5 h-3.5 flex-shrink-0"
+                        aria-hidden="true"
+                        style={{ color: "rgb(52, 211, 153)" }}
+                      >
+                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                      </svg>
+                      <span>More Than HPI Check</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="lucide lucide-info w-3.5 h-3.5"
+                        aria-hidden="true"
+                        style={{ color: "rgba(241, 245, 249, 0.72)" }}
+                      >
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v-4" />
+                        <path d="M12 8h.01" />
+                      </svg>
+                    </button>
+                    <p
+                      className="text-center"
+                      data-testid="hero-vehicle-types"
+                      style={{
+                        fontSize: "11.5px",
+                        color: "rgba(148, 163, 184, 0.85)",
+                        letterSpacing: "0.02em",
+                        fontWeight: "600",
+                        opacity: "1",
+                      }}
+                    >
+                      Cars · Motorcycles · Vans · Trucks — any UK registration
+                    </p>
+                    <div
+                      className="pt-2 cta-shimmer-wrap rounded-full"
+                      tabIndex="0"
+                    >
+                      <button
+                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 bg-primary shadow hover:bg-primary/90 h-9 px-4 w-full text-white py-6 text-lg font-bold transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed tracking-wide"
+                        data-testid="check-vehicle-btn"
+                        style={{
+                          background:
+                            "linear-gradient(\n                            rgb(77, 193, 83),\n                            rgb(52, 168, 83),\n                            rgb(42, 140, 67)\n                          )",
+                          boxShadow:
+                            "rgb(30, 122, 53) 0px 4px 0px,\n                            rgba(42, 140, 67, 0.45) 0px 8px 20px,\n                            rgba(255, 255, 255, 0.2) 0px 1px 0px inset",
+                          textShadow: "rgba(0, 0, 0, 0.2) 0px 1px 2px",
+                          borderRadius: "9999px",
+                        }}
+                      >
+                        Check now — Free
+                      </button>
+                    </div>
+                    <div
+                      className="flex items-center justify-center gap-2 mt-4"
+                      style={{ opacity: "1",  }}
+                    >
+                      <span
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-wide uppercase badge-breathe text-center leading-tight"
+                        style={{
+                          background:
+                            "linear-gradient(\n                            90deg,\n                            rgba(52, 211, 153, 0.18),\n                            rgba(16, 185, 129, 0.24)\n                          )",
+                          color: "rgb(167, 243, 208)",
+                          border: "1px solid rgba(110, 231, 183, 0.35)",
+                          boxShadow: "rgba(16, 185, 129, 0.22) 0px 0px 18px",
+                          letterSpacing: "0.05em",
+                          maxWidth: "92%",
+                          textWrap: "balance",
+                        }}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-circle-check-big w-3 h-3 flex-shrink-0"
+                          aria-hidden="true"
+                          style={{ color: "rgb(52, 211, 153)" }}
+                        >
+                          <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                          <path d="m9 11 3 3L22 4" />
+                        </svg>
+                        Reveal hidden issues, likely repair costs, and your
+                        negotiation position.
+                      </span>
+                    </div>
+                    <div
+                      className="flex items-center justify-center mt-2"
+                      style={{ opacity: "1",  }}
+                    >
+                      <span
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-semibold tracking-wide uppercase text-center leading-tight"
+                        data-testid="hero-disability-badge"
+                        style={{
+                          background:
+                            "linear-gradient(\n                            90deg,\n                            rgba(45, 212, 191, 0.16),\n                            rgba(14, 165, 233, 0.18)\n                          )",
+                          color: "rgb(153, 246, 228)",
+                          border: "1px solid rgba(45, 212, 191, 0.35)",
+                          boxShadow: "rgba(45, 212, 191, 0.18) 0px 0px 18px",
+                          letterSpacing: "0.05em",
+                          maxWidth: "92%",
+                          textWrap: "balance",
+                        }}
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-accessibility w-3 h-3 flex-shrink-0"
+                          aria-hidden="true"
+                          style={{ color: "rgb(94, 234, 212)" }}
+                        >
+                          <circle cx="16" cy="4" r="1"></circle>
+                          <path d="m18 19 1-7-6 1" />
+                          <path d="m5 8 3-3 5.5 3-2.36 3.5" />
+                          <path d="M4.24 14.5a5 5 0 0 0 6.88 6" />
+                          <path d="M13.76 17.5a5 5 0 0 0-6.88-6" />
+                        </svg>
+                        Disability-friendly app — we help those who need it most
+                      </span>
+                    </div>
+                    <p
+                      className="text-center font-medium mt-3"
+                      style={{
+                        color: "rgba(255, 255, 255, 0.72)",
+                        fontSize: "12px",
+                        letterSpacing: "0.03em",
+                      }}
+                    >
+                      No sign-in needed • Real DVSA + DVLA data • 🛡 More Than
+                      HPI Check • Instant verdict
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="mt-8"
+                data-testid="trusted-data-strip"
+                style={{
+                  width: "100vw",
+                  marginLeft: "calc(50% - 50vw)",
+                  opacity: "1"
+                }}
+              >
+                <p
+                  className="text-center font-black"
+                  data-testid="trusted-data-title"
+                  style={{
+                    fontSize: "13px",
+                    letterSpacing: "0.04em",
+                    color: "rgb(74, 222, 128)",
+                  }}
+                >
+                  Trusted UK Data Infrastructure
+                </p>
+                <p
+                  className="text-center mt-1 px-4"
+                  data-testid="trusted-data-subtitle"
+                  style={{
+                    fontSize: "10px",
+                    color: "rgba(226, 232, 240, 0.55)",
+                    letterSpacing: "0.06em",
+                    fontWeight: "600",
+                  }}
+                >
+                  Protecting buyers from fraud · Built on official UK vehicle
+                  data sources
+                </p>
+                <div
+                  className="mt-3 px-4 py-3 sm:px-10 panel-premium"
+                  style={{
+                    background:
+                      "radial-gradient(\n                      rgba(0, 0, 0, 0.62) 0%,\n                      rgba(0, 0, 0, 0.42) 55%,\n                      rgba(0, 0, 0, 0.18) 100%\n                    )",
+                    borderTop: "1px solid rgba(255, 255, 255, 0.15)",
+                    borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
+                    backdropFilter: "blur(6px)",
+                    boxShadow:
+                      "rgba(0, 0, 0, 0.55) 0px 30px 70px -20px,\n                      rgba(255, 255, 255, 0.1) 0px 1px 0px inset",
+                  }}
+                >
+                  <div
+                    className="mx-auto grid grid-cols-2 gap-y-4 items-center justify-items-center sm:flex sm:items-center sm:justify-center sm:gap-0"
+                    style={{ maxWidth: "1180px" }}
+                  >
+                    <div
+                      className="flex items-center gap-2 sm:px-5 lg:px-7"
+                      data-testid="trust-badge-gvd"
+                    >
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          width: "2px",
+                          height: "30px",
+                          background: "rgb(0, 163, 59)",
+                          borderRadius: "2px",
+                        }}
+                      ></span>
+                      <div className="text-left">
+                        <p
+                          className="uppercase font-bold"
+                          style={{
+                            fontSize: "7.5px",
+                            letterSpacing: "0.22em",
+                            color: "rgba(226, 232, 240, 0.6)",
+                            lineHeight: "1",
+                          }}
+                        >
+                          Powered by
+                        </p>
+                        <p
+                          className="font-black"
+                          style={{
+                            fontSize: "12.5px",
+                            color: "rgba(255, 255, 255, 0.92)",
+                            letterSpacing: "-0.15px",
+                            lineHeight: "1.15",
+                            marginTop: "3px",
+                          }}
+                        >
+                          Global Vehicle Data
+                        </p>
+                        <p
+                          style={{
+                            fontSize: "8.5px",
+                            color: "rgba(226, 232, 240, 0.55)",
+                            fontWeight: "600",
+                            marginTop: "2px",
+                            lineHeight: "1.3",
+                          }}
+                        >
+                          UK registry data partner
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="hidden sm:block"
+                      aria-hidden="true"
+                      style={{
+                        width: "1px",
+                        height: "28px",
+                        background: "rgba(148, 163, 184, 0.22)",
+                      }}
+                    ></span>
+                    <div
+                      className="flex items-center gap-2 sm:px-5 lg:px-7"
+                      data-testid="trust-logo-dvla"
+                    >
+                      <img
+                        alt=""
+                        aria-hidden="true"
+                        draggable="false"
+                        src="/logos/coat_of_arms.png"
+                        style={{
+                          height: "34px",
+                          width: "auto",
+                          filter: "brightness(0) invert(1)",
+                          opacity: "0.78",
+                        }}
+                      />
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          width: "2px",
+                          alignSelf: "stretch",
+                          background: "rgb(0, 163, 59)",
+                          borderRadius: "2px",
+                        }}
+                      ></span>
+                      <div className="text-left">
+                        <span
+                          className="font-black"
+                          style={{
+                            fontSize: "19px",
+                            color: "rgba(255, 255, 255, 0.9)",
+                            letterSpacing: "-0.3px",
+                            lineHeight: "1",
+                          }}
+                        >
+                          DVLA
+                        </span>
+                        <p
+                          style={{
+                            fontSize: "8.5px",
+                            color: "rgba(226, 232, 240, 0.6)",
+                            fontWeight: "600",
+                            marginTop: "2px",
+                            lineHeight: "1.3",
+                          }}
+                        >
+                          Driver and Vehicle
+                          <br />
+                          Licensing Agency
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="hidden sm:block"
+                      aria-hidden="true"
+                      style={{
+                        width: "1px",
+                        height: "28px",
+                        background: "rgba(148, 163, 184, 0.22)",
+                      }}
+                    ></span>
+                    <div
+                      className="flex items-center gap-2 sm:px-5 lg:px-7"
+                      data-testid="trust-logo-dvsa"
+                    >
+                      <img
+                        alt=""
+                        aria-hidden="true"
+                        draggable="false"
+                        src="/logos/coat_of_arms.png"
+                        style={{
+                          height: "34px",
+                          width: "auto",
+                          filter: "brightness(0) invert(1)",
+                          opacity: "0.78",
+                        }}
+                      />
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          width: "2px",
+                          alignSelf: "stretch",
+                          background: "rgb(0, 163, 59)",
+                          borderRadius: "2px",
+                        }}
+                      ></span>
+                      <div className="text-left">
+                        <span
+                          className="font-black"
+                          style={{
+                            fontSize: "19px",
+                            color: "rgba(255, 255, 255, 0.9)",
+                            letterSpacing: "-0.3px",
+                            lineHeight: "1",
+                          }}
+                        >
+                          DVSA
+                        </span>
+                        <p
+                          style={{
+                            fontSize: "8.5px",
+                            color: "rgba(226, 232, 240, 0.6)",
+                            fontWeight: "600",
+                            marginTop: "2px",
+                            lineHeight: "1.3",
+                          }}
+                        >
+                          Driver &amp; Vehicle
+                          <br />
+                          Standards Agency
+                        </p>
+                        <p
+                          className="uppercase font-black"
+                          style={{
+                            fontSize: "8px",
+                            letterSpacing: "0.22em",
+                            color: "rgb(74, 222, 128)",
+                            marginTop: "2px",
+                          }}
+                        >
+                          Approved
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="hidden sm:block"
+                      aria-hidden="true"
+                      style={{
+                        width: "1px",
+                        height: "28px",
+                        background: "rgba(148, 163, 184, 0.22)",
+                      }}
+                    ></span>
+                    <div
+                      className="flex items-center gap-2 sm:px-5 lg:px-7"
+                      data-testid="trust-logo-mthc"
+                    >
+                      <svg
+                        width="34"
+                        height="37"
+                        viewBox="0 0 58 62"
+                        aria-hidden="true"
+                        style={{ flexShrink: "0" }}
+                      >
+                        <defs>
+                          <linearGradient
+                            id="mthcShieldGrad"
+                            x1="0%"
+                            y1="0%"
+                            x2="100%"
+                            y2="100%"
+                          >
+                            <stop offset="0%" stop-color="#7ED957"></stop>
+                            <stop offset="55%" stop-color="#3FAE49"></stop>
+                            <stop offset="100%" stop-color="#1E7A2E"></stop>
+                          </linearGradient>
+                        </defs>
+                        <path
+                          d="M29 2 L54 10 V30 C54 45 43.5 55.5 29 60 C14.5 55.5 4 45 4 30 V10 Z"
+                          fill="url(#mthcShieldGrad)"
+                        />
+                        <path
+                          d="M29 9 L47.5 15 V30 C47.5 41.5 39.5 50 29 53.5 C18.5 50 10.5 41.5 10.5 30 V15 Z"
+                          fill="#0B1410"
+                        />
+                        <path
+                          d="M19 30.5 L26.5 38 L40 22.5"
+                          fill="none"
+                          stroke="#FFFFFF"
+                          strokeWidth="5.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                      <div className="text-left">
+                        <p
+                          className="font-black uppercase"
+                          style={{
+                            fontSize: "9.5px",
+                            letterSpacing: "0.14em",
+                            color: "rgba(255, 255, 255, 0.92)",
+                            lineHeight: "1",
+                          }}
+                        >
+                          More Than
+                        </p>
+                        <p
+                          className="font-black uppercase"
+                          style={{
+                            fontSize: "13.5px",
+                            letterSpacing: "0.06em",
+                            lineHeight: "1.05",
+                            marginTop: "2px",
+                          }}
+                        >
+                          <span style={{ color: "rgb(63, 174, 73)" }}>HPI</span>
+                          <span style={{ color: "rgba(255, 255, 255, 0.92)" }}>
+                            Check
+                          </span>
+                        </p>
+                        <p
+                          className="flex items-center gap-1.5 uppercase font-bold"
+                          style={{
+                            fontSize: "5.5px",
+                            letterSpacing: "0.2em",
+                            color: "rgba(226, 232, 240, 0.78)",
+                            marginTop: "2px",
+                            width: "fit-content",
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          <span
+                            aria-hidden="true"
+                            style={{
+                              display: "inline-block",
+                              width: "10px",
+                              height: "1px",
+                              background: "rgb(63, 174, 73)",
+                            }}
+                          ></span>
+                          Complete Vehicle Intelligence
+                          <span
+                            aria-hidden="true"
+                            style={{
+                              display: "inline-block",
+                              width: "10px",
+                              height: "1px",
+                              background: "rgb(63, 174, 73)",
+                            }}
+                          ></span>
+                        </p>
+                      </div>
+                    </div>
+                    <span
+                      className="hidden sm:block"
+                      aria-hidden="true"
+                      style={{
+                        width: "1px",
+                        height: "28px",
+                        background: "rgba(148, 163, 184, 0.22)",
+                      }}
+                    ></span>
+                    <div
+                      className="flex flex-col items-center justify-center sm:px-5 lg:px-7"
+                      data-testid="trust-logo-ico"
+                    >
+                      <img
+                        alt="ICO — Information Commissioner's Office"
+                        draggable="false"
+                        src="/logos/ico.svg"
+                        style={{
+                          height: "28px",
+                          width: "auto",
+                          filter: "brightness(0) invert(1)",
+                          opacity: "0.8",
+                        }}
+                      />
+                      <p
+                        style={{
+                          fontSize: "8px",
+                          color: "rgba(226, 232, 240, 0.6)",
+                          fontWeight: "600",
+                          marginTop: "2px",
+                        }}
+                      >
+                        Registered
+                      </p>
+                    </div>
+                    <span
+                      className="hidden sm:block"
+                      aria-hidden="true"
+                      style={{
+                        width: "1px",
+                        height: "28px",
+                        background: "rgba(148, 163, 184, 0.22)",
+                      }}
+                    ></span>
+                    <div
+                      className="flex items-center gap-2 sm:px-5 lg:px-7"
+                      data-testid="trust-badge-pine"
+                    >
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          width: "2px",
+                          height: "30px",
+                          background: "rgb(0, 163, 59)",
+                          borderRadius: "2px",
+                        }}
+                      ></span>
+                      <div className="text-left">
+                        <p
+                          className="uppercase font-bold"
+                          style={{
+                            fontSize: "7.5px",
+                            letterSpacing: "0.22em",
+                            color: "rgba(226, 232, 240, 0.6)",
+                            lineHeight: "1",
+                          }}
+                        >
+                          Powered by
+                        </p>
+                        <p
+                          className="font-black"
+                          style={{
+                            fontSize: "12.5px",
+                            color: "rgba(255, 255, 255, 0.92)",
+                            letterSpacing: "-0.15px",
+                            lineHeight: "1.15",
+                            marginTop: "3px",
+                          }}
+                        >
+                          Pine.ai
+                        </p>
+                        <p
+                          style={{
+                            fontSize: "8.5px",
+                            color: "rgba(226, 232, 240, 0.55)",
+                            fontWeight: "600",
+                            marginTop: "2px",
+                            lineHeight: "1.3",
+                          }}
+                        >
+                          Voice assistant partner
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <footer
+            className="relative z-10 px-4 pb-6 pt-2 text-center"
+            data-testid="legal-footer"
+          >
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
+              <a
+                href="/terms"
+                className="font-semibold hover:opacity-100 transition-opacity"
+                data-testid="footer-link-terms"
+                style={{
+                  fontSize: "11.5px",
+                  color: "rgba(226, 232, 240, 0.55)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Terms of Service
+              </a>
+              <span
+                style={{ color: "rgba(148, 163, 184, 0.35)", fontSize: "11px" }}
+              >
+                ·
+              </span>
+              <a
+                href="/privacy"
+                className="font-semibold hover:opacity-100 transition-opacity"
+                data-testid="footer-link-privacy"
+                style={{
+                  fontSize: "11.5px",
+                  color: "rgba(226, 232, 240, 0.55)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Privacy Policy
+              </a>
+              <span
+                style={{ color: "rgba(148, 163, 184, 0.35)", fontSize: "11px" }}
+              >
+                ·
+              </span>
+              <a
+                href="/cookies"
+                className="font-semibold hover:opacity-100 transition-opacity"
+                data-testid="footer-link-cookies"
+                style={{
+                  fontSize: "11.5px",
+                  color: "rgba(226, 232, 240, 0.55)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Cookie Policy
+              </a>
+              <span
+                style={{ color: "rgba(148, 163, 184, 0.35)", fontSize: "11px" }}
+              >
+                ·
+              </span>
+              <a
+                href="/accessibility"
+                className="font-semibold hover:opacity-100 transition-opacity"
+                data-testid="footer-link-accessibility"
+                style={{
+                  fontSize: "11.5px",
+                  color: "rgba(226, 232, 240, 0.55)",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                Accessibility
+              </a>
+              <span
+                style={{ color: "rgba(148, 163, 184, 0.35)", fontSize: "11px" }}
+              >
+                ·
+              </span>
+              <span
+                style={{
+                  fontSize: "11.5px",
+                  color: "rgba(148, 163, 184, 0.45)",
+                }}
+              >
+                © 2026 Worthify
+              </span>
+            </div>
+            <p
+              className="mx-auto mt-3 leading-relaxed"
+              data-testid="footer-legal-disclosure"
+              style={{
+                fontSize: "10.5px",
+                color: "rgba(148, 163, 184, 0.5)",
+                maxWidth: "760px",
+                letterSpacing: "0.01em",
+              }}
+            >
+              Worthify is a trading name of Worthify Ltd. Registered in
+              Scotland, company number SC892241. Registered office: Unit 08,
+              Flexspace, Glasgow Business Park, Springhill Parkway, Baillieston,
+              Glasgow, G69 6GA, United Kingdom. ICO registration C1956536.
+              Protected by UK Patent Application GB2613261.3. © 2026 Worthify
+              Ltd. All rights reserved.
+            </p>
+          </footer>
+          <div
+            className="fixed z-[60] left-0 right-0 bottom-0 px-3 pb-3 sm:px-4 sm:pb-4 pointer-events-none"
+            data-testid="cookie-banner"
+            style={{ opacity: "1",  }}
+          >
+            <div
+              className="mx-auto pointer-events-auto relative"
+              style={{
+                maxWidth: "720px",
+                borderRadius: "18px",
+                background:
+                  "linear-gradient(\n                  135deg,\n                  rgba(15, 23, 42, 0.96) 0%,\n                  rgba(30, 41, 59, 0.96) 100%\n                )",
+                border: "1px solid rgba(134, 239, 172, 0.28)",
+                boxShadow: "rgba(0, 0, 0, 0.45) 0px 18px 38px",
+                backdropFilter: "blur(14px)",
+                padding: "14px 16px 14px 14px",
+                color: "white",
+              }}
+            >
+              <div className="flex items-start gap-3">
+                <div
+                  className="flex items-center justify-center flex-shrink-0"
+                  style={{
+                    width: "38px",
+                    height: "38px",
+                    borderRadius: "12px",
+                    background:
+                      "linear-gradient(\n                      135deg,\n                      rgb(34, 197, 94),\n                      rgb(22, 163, 74)\n                    )",
+                    boxShadow: "rgba(34, 197, 94, 0.35) 0px 6px 14px",
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="lucide lucide-cookie w-5 h-5 text-white"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+                    <path d="M8.5 8.5v.01" />
+                    <path d="M16 15.5v.01" />
+                    <path d="M12 12v.01" />
+                    <path d="M11 17v.01" />
+                    <path d="M7 14v.01" />
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p
+                    className="font-black"
+                    style={{
+                      fontSize: "13.5px",
+                      letterSpacing: "-0.2px",
+                      color: "white",
+                    }}
+                  >
+                    Help us improve Worthify
+                  </p>
+                  <p
+                    className="mt-1 leading-[1.45]"
+                    style={{
+                      fontSize: "12px",
+                      color: "rgba(226, 232, 240, 0.78)",
+                    }}
+                  >
+                    We always use essential storage (localStorage + Stripe
+                    session). With your consent we also enable product analytics
+                    (PostHog) to see which features are used and improve the
+                    funnel. No marketing, no data selling.
+                    <a
+                      className="font-semibold underline"
+                      data-testid="cookie-banner-policy-link"
+                      href="/cookies"
+                      data-discover="true"
+                      style={{
+                        color: "rgb(134, 239, 172)",
+                        textUnderlineOffset: "2px",
+                      }}
+                    >
+                      Cookie policy
+                    </a>
+                    .
+                  </p>
+                  <div className="flex flex-wrap items-center gap-2 mt-3">
+                    <button
+                      type="button"
+                      data-testid="cookie-banner-accept"
+                      className="font-bold inline-flex items-center justify-center"
+                      style={{
+                        padding: "8px 16px",
+                        borderRadius: "999px",
+                        background:
+                          "linear-gradient(\n                          135deg,\n                          rgb(34, 197, 94) 0%,\n                          rgb(22, 163, 74) 100%\n                        )",
+                        color: "white",
+                        fontSize: "12.5px",
+                        boxShadow: "rgba(34, 197, 94, 0.32) 0px 4px 12px",
+                      }}
+                    >
+                      Accept analytics
+                    </button>
+                    <button
+                      type="button"
+                      data-testid="cookie-banner-reject"
+                      className="font-bold inline-flex items-center justify-center"
+                      style={{
+                        padding: "8px 16px",
+                        borderRadius: "999px",
+                        background: "rgba(148, 163, 184, 0.18)",
+                        color: "rgba(226, 232, 240, 0.92)",
+                        fontSize: "12.5px",
+                        border: "1px solid rgba(148, 163, 184, 0.32)",
+                      }}
+                    >
+                      Essential only
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

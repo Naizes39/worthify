@@ -1,6 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+const fs = require('fs');
+
+let index = fs.readFileSync('index.html', 'utf8');
+
+index = index.replace('<head>', `<head>
     <meta name="description" content="Check any UK car's MOT history instantly. Get AI-powered risk analysis, real registry data (write-off, theft, finance, mileage), and a buy / caution / avoid verdict before you commit."/>
     <meta name="keywords" content="UK MOT history check, car history check UK, vehicle data check, write-off check, HPI alternative, car finance check, car theft check, car valuation UK, used car checker, Worthify"/>
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
@@ -21,13 +23,6 @@
     <meta name="twitter:title" content="Worthify — UK car MOT history &amp; risk check"/>
     <meta name="twitter:description" content="Check any UK car's real risk in 30 seconds."/>
     <meta name="twitter:image" content="https://worthify.co.uk/og-default.png"/>
+`);
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Worthify | UK Car MOT History Checker</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+fs.writeFileSync('index.html', index);
